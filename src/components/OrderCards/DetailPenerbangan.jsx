@@ -227,3 +227,4 @@ const DetailPenerbangan = () => {
 };
 
 export default DetailPenerbangan;
+

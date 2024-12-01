@@ -10,6 +10,7 @@ import Payment from './pages/Payment'
 import NotFoundPage from './pages/NotFoundPage'
 import Login from './pages/LoginPage'
 import Register from './pages/RegisterPage'
+import HistoryOrder from './pages/HistoryOrder'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path='/checkout' element={<OrderPage />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/history-order" element={<HistoryOrder />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </Router>

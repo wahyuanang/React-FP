@@ -23,7 +23,7 @@ const OrderHeader = () => {
   };
 
   return (
-    <div className="shadow-md py-10">
+    <div className="shadow-md py-8">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-lg">
         <OrderBreadcrumb
           text1={"Isi Data Diri"}
