@@ -10,7 +10,9 @@ import Payment from './pages/Payment'
 import NotFoundPage from './pages/NotFoundPage'
 import Login from './pages/LoginPage'
 import Register from './pages/RegisterPage'
+import NotificationPage from './pages/NotificationPage'
 import HistoryOrder from './pages/HistoryOrder'
+import ProfilePage from './pages/ProfilePage' 
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path='/checkout' element={<OrderPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/history-order" element={<HistoryOrder />} />
+        <Route path="/notification" element={<NotificationPage />} />
+        <Route path="/profile-login" element={<ProfilePage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </Router>
