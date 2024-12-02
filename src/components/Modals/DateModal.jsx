@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronLeft, ChevronRight, X  } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import ButtonIconClose from '../Button/ButtonIconClose';
 
 const DatePickerModal = ({
@@ -85,11 +85,11 @@ const DatePickerModal = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center z-50">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 min-h-screen">
       <div className="bg-white rounded-2xl p-4 max-w-2xl w-full mx-4 mt-32 animate-[slideUp_0.3s_ease-out]">
         <div className="flex justify-between items-center mb-4" onClick={onClose}>
           <h3 className="text-lg font-bold">{title}</h3>
-         <ButtonIconClose/>
+          <ButtonIconClose />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -97,7 +97,7 @@ const DatePickerModal = ({
             <div className="flex items-center justify-between mb-3">
               <button
                 onClick={handlePreviousMonth}
-                className="p-1 hover:bg-gray-100 rounded"
+                className="p-2 hover:bg-[#D0B7E6] rounded-full"
               >
                 <ChevronLeft className="w-4 h-4 text-gray-600" />
               </button>
@@ -124,7 +124,7 @@ const DatePickerModal = ({
               </h4>
               <button
                 onClick={handleNextMonth}
-                className="p-1 hover:bg-gray-100 rounded"
+                className="p-2 hover:bg-[#D0B7E6] rounded-full"
               >
                 <ChevronRight className="w-4 h-4 text-gray-600" />
               </button>
@@ -163,10 +163,9 @@ const Calendar = ({
       <div
         key={index}
         className={`h-8 flex items-center justify-center rounded-md text-xs
-          ${date ? 'cursor-pointer hover:bg-purple-50' : ''}
-          ${isSelected(date) ? 'bg-purple-600 text-white hover:bg-purple-700' : ''}
-          ${!isSelected(date) && date ? 'text-gray-700' : 'text-gray-300'}
-        `}
+          ${date ? 'cursor-pointer hover:bg-purple-50' : ''} 
+          ${isSelected(date) ? 'bg-purple-600 text-white hover:bg-purple-700' : ''} 
+          ${!isSelected(date) && date ? 'text-gray-700' : 'text-gray-300'}`}
         onClick={() => date && onSelect(date)}
       >
         {date ? date.getDate() : ''}

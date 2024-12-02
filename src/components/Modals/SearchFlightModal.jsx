@@ -17,15 +17,15 @@ const SearchFlightModal = ({ isOpen, onClose, onSelect }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
       <div
         className="absolute inset-0 bg-black bg-opacity-50"
         onClick={onClose} 
       />
-      <div className="bg-white w-full max-w-xl rounded-2xl overflow-hidden relative transform transition-all duration-300 ease-out">
+      <div className="bg-white w-[400px] h-[348px] max-w-xl rounded-2xl overflow-hidden relative transform transition-all duration-300 ease-out">
         <div className="p-4">
           <div className="flex items-center gap-4 mb-6">
-            <div className="flex-1 flex items-center border rounded-lg p-2">
+            <div className="flex-1 flex items-center rounded-lg p-2 border border-[#D0D0D0] ">
               <Search className="text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -40,7 +40,7 @@ const SearchFlightModal = ({ isOpen, onClose, onSelect }) => {
             </div>
           </div>
 
-          <div>
+          <div className="border-t pt-4 border-[#D0D0D0]">
             <div className="flex justify-between items-center mb-4">
               <h3 className="font-medium text-md px-2">Pencarian Terkini</h3>
               <button
@@ -59,7 +59,7 @@ const SearchFlightModal = ({ isOpen, onClose, onSelect }) => {
                 .map((city) => (
                   <div
                     key={city}
-                    className="flex items-center justify-between p-2 border-b cursor-pointer"
+                    className="flex items-center justify-between p-2 border-b border-[#D0D0D0] cursor-pointer"
                     onClick={() => onSelect(city)}
                   >
                     <span>{city}</span>
